@@ -17,7 +17,7 @@
   Type the number corresponding to the desired command and press enter
 
 ## Data.txt:
-  This file simply contains a list of 10 integers (for simplicity's sake) to be passed into the array that this program utilizes for all operations
+  This file simply contains a list of 100 integers to be passed into the array that this program utilizes for all operations
 
 ## DataHandler.h:
   This is the programs header file containing all of the necessary member data and function definitions.
@@ -32,7 +32,7 @@
      
      All of these functions will be broken down further in the DataHandler.cpp section
    ### In the private section it contains:
-      -int size = 10, which is the initial size of the array
+      -int size = 100, which is the initial size of the array
       -int *DataArray = new int[size], is the pointer to the array that all of the functions act upon
 
 ## DataHandler.cpp:
@@ -47,10 +47,11 @@
      If input does not exist, print to console that no file has been found and return
      
    ### void DataHandler::OutputData()
-     This function simply prints "Array:" and starts a new line, for readability's sake, and goes into a loop
+     This function simply prints "Array:" and starts a new line, declares int count = 0, and goes into a loop
                                     for(int i = 0 to size)
-                                      print i followed by ": " followed by the array element at index i and starts a new line
-     Then the function prints "-----", for readability and returns
+                                      print the array element at index i followed by a space
+                                      if count == 10, new line, count = 0 (to give appearance of 10x10 array in the output)
+     Then the funtion starts a new line, and returns
      
    ### void DataHandler::FindInt(int target)
      This function looks for the target integer by going into a loop
@@ -82,19 +83,19 @@
   ![Initial](https://user-images.githubusercontent.com/113874835/191409962-d21f18e3-bdec-4e2a-ae5b-82115c4cb763.png)
   
   -After entering 4 to print the array we get: (notice that we are prompted for input once again after array is printed)
-  ![Print](https://user-images.githubusercontent.com/113874835/191410135-af033a9b-9665-4c9e-865c-ed4a951b80f8.png)
+  ![Print](https://user-images.githubusercontent.com/113874835/192079155-757edc90-c6d1-4fde-b121-6218fcc3b4f4.png)
   
-  -After entering 0 to search for an int, we are asked what int we would like to search for, here 13 was entered and the function returned that 13 is at index 1, which is consistent with the image above:
-  ![Search](https://user-images.githubusercontent.com/113874835/191410355-abb58879-ca11-4097-94fc-0bb7a1000e54.png)
+  -After entering 0 to search for an int, we are asked what int we would like to search for, here 23 was entered and the function returned that 13 is at index 5, which is consistent with the image above:
+  ![Search](https://user-images.githubusercontent.com/113874835/192079189-71bc5afb-7d5d-4e71-bc69-2306a438e784.png)
   
-  -After entering 1 to change a value by its index, we are prompted to enter the index, and the new value for the element at said index, 2 and 47 are entered respectively. Then, command 4 is used to print the array and show that element 2 is now equal to 47:
-  ![Mod](https://user-images.githubusercontent.com/113874835/191410648-1e585040-800a-45d2-b545-3ba8e9110513.png)
+  -After entering 1 to change a value by its index, we are prompted to enter the index, and the new value for the element at said index, 26 and 42 are entered respectively. Then, command 4 is used to print the array and show that element 26 is now equal to 42:
+  ![Mod](https://user-images.githubusercontent.com/113874835/192079237-18ffac90-6e2d-4ab2-8aaa-40e754f8ce9f.png)
   
-  -After entering 2 to add and integer to the end of the array, we are asked what integer we would like to add. 62 in this case. Command 4 is then called to show that 62 was indeed added to the end of the array, and that the array is one element larger:
-  ![Add](https://user-images.githubusercontent.com/113874835/191411010-577e3be8-356c-4cf3-98e6-aa9b8f9de135.png)
+  -After entering 2 to add and integer to the end of the array, we are asked what integer we would like to add. 77 in this case. Command 4 is then called to show that 77 was indeed added to the end of the array, and that the array is one element larger:
+  ![Add](https://user-images.githubusercontent.com/113874835/192079265-673b9cc3-621a-491a-a792-0f4772d5e058.png)
   
-  -After entering 3 to remove an integer by index, we choose to remove index 7. The console then prints that 26 at element 7 has been removed, and we once again call command 4 to show that everything is working correctly:
-  ![Remove](https://user-images.githubusercontent.com/113874835/191411199-ecabe589-4645-4f1d-b607-6e01173123dd.png)
+  -After entering 3 to remove an integer by index, we choose to remove index 42. The console then prints that 90 at index 42 has been removed, and we once again call command 4 to show that everything is working correctly:
+  ![Remove](https://user-images.githubusercontent.com/113874835/192079298-00e6819a-c48c-4874-85d5-e6bb2d7860b1.png)
   
   -Then, command 5 is called, and the program terminates:
   ![Exit](https://user-images.githubusercontent.com/113874835/191411252-fd860c32-e449-41e0-8a90-b89dd2373156.png)
