@@ -20,10 +20,16 @@ void DataHandler::OutputData()
 {
 	//Uses for loop to print values from the array to the console
 	std::cout << "Array:" << std::endl;
+	int count = 0;
 	for (int i = 0; i < size; i++) {
-		std::cout << i << ": " << DataArray[i] << std::endl;
+		std::cout << DataArray[i] << " ";
+		count++;
+		if (count == 10) {
+			std::cout << std::endl;
+			count = 0;
+		}
 	}
-	std::cout << "-----" << std::endl;
+	std::cout << std::endl;
 	return;
 }
 

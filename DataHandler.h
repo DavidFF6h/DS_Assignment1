@@ -24,8 +24,8 @@ public:
 	//@Param = index of element to remove
 	void Remove(int index); 
 private:
-	//Size of array with hard-coded initial size of 10, not the best practice but will do for the purposes of this program
-	int size = 10;
+	//Size of array with hard-coded initial size of 100, not the best practice but will do for the purposes of this program
+	int size = 100;
 	//Declaring our array
 	int *DataArray = new int[size];
 };
