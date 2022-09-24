@@ -85,7 +85,7 @@
   -After entering 4 to print the array we get: (notice that we are prompted for input once again after array is printed)
   ![Print](https://user-images.githubusercontent.com/113874835/192079155-757edc90-c6d1-4fde-b121-6218fcc3b4f4.png)
   
-  -After entering 0 to search for an int, we are asked what int we would like to search for, here 23 was entered and the function returned that 13 is at index 5, which is consistent with the image above:
+  -After entering 0 to search for an int, we are asked what int we would like to search for, here 23 was entered and the function returned that 23 is at index 5, which is consistent with the image above:
   ![Search](https://user-images.githubusercontent.com/113874835/192079189-71bc5afb-7d5d-4e71-bc69-2306a438e784.png)
   
   -After entering 1 to change a value by its index, we are prompted to enter the index, and the new value for the element at said index, 26 and 42 are entered respectively. Then, command 4 is used to print the array and show that element 26 is now equal to 42:
